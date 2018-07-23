@@ -15,6 +15,19 @@
             transform: rotate(-5deg) scale(1.1);
         }
     }
+
+    & > p {
+        position: relative;
+
+        &::before {
+            content: '“';
+            font-size: 5em;
+            line-height: 1em;
+            color: #bbb;
+            position: absolute;
+            top: -.4em;
+        }
+    }
 }
 
 .petrobras {
@@ -25,4 +38,13 @@
 .fiat {
     float: right;
     margin-right: 0;
+}
+
+.container > p::first-letter {
+    font-size: 200%;
+    font-weight: bold;
+    color: #3C1D3D;
+    text-shadow: 1px 1px #000;
+    margin-right: .2ch;
+    line-height: 1;
 }
