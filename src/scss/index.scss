@@ -98,7 +98,7 @@
 .blog li {
     width: 30%;
 }
-.blog li a {
+.blog a {
     color: #FCF;
     padding: .5em;
     display: block;
@@ -240,6 +240,7 @@ body {
     font-family: "Open Sans Condensed", sans-serif;
 }
 .blog .inicio-post {
+    display: none;
     position: absolute;
     top: 4em;
     height: 8em;
@@ -249,12 +250,12 @@ body {
     color: #000;
     padding: 1.5em;
 }
-.blog .mais-recente {
-    background-color: #F2FFFC;
-}
-.blog .mais-recente a {
-    color: #F26;
-}
+// .blog .mais-recente {
+//     background-color: #F2FFFC;
+// }
+// .blog .mais-recente a {
+//     color: #F26;
+// }
 
 .post-blog + .post-blog {
     /* trocamos padding-bottom e margin-bottom por
@@ -270,4 +271,14 @@ body {
     background-repeat: no-repeat;
     /* trocamos "bottom center" por "top center" */
     background-position: top center;
+}
+
+.blog a:hover + .inicio-post,
+.blog a:focus + .inicio-post {
+    display: block;
+}
+.blog a:hover,
+.blog a:focus {
+    background-color: #F2FFFC;
+    color: #F26;
 }
