@@ -11,4 +11,11 @@
 
 .portfolio img {
     width: 100%;
+    box-shadow: 2px 2px 4px black, 
+                -2px -2px 4px orange;
+    // box-shadow: 0 0 0 2px black, 
+    //             0 0 0 4px white, 
+    //             0 0 0 6px black, 
+    //             0 0 0 8px white, 
+    //             0 0 0 10px black;
 }
