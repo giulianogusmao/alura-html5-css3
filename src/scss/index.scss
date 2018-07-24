@@ -21,10 +21,29 @@
     color: #000;
 }
 .saudacao em {
+    position: relative;
     color: #851944;
     font-size: 4em;
     transform: rotate(-5deg) skew(-10deg);
     display: inline-block;
+
+    animation: flutua 1.5s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+    &:hover {
+        animation-play-state: paused;
+    }
+}
+
+
+@keyframes flutua {
+   from {
+        top: -5px;
+    }
+    to {
+        top: 5px;
+    }
 }
 .botao-index {
     font-size: 1.25em;
@@ -63,13 +82,22 @@
 .trabalhos h2 {
     color: #FFF;
 }
-.trabalhos ul {
-    overflow: hidden;
-    border: .5em solid black;
+.trabalhos ul {    
+    display: flex;
+    flex-wrap: wrap;
 }
 .trabalhos li {
-    float: left;
-    width: 33.333%;
+    flex: 1;
+    border: .5em solid black;
+    
+    &:first-child {
+        transform: scale(1.2);
+        z-index: 1;
+    }
+    
+    &:nth-child(2) {
+        order: -1;
+    }
 }
 .trabalhos img {
     width: 100%;
@@ -141,7 +169,18 @@ body {
     font-size: 400%;
     color: #D5447E;
     position: absolute;
+
+    animation: aparece 1s;
+    animation-fill-mode: backwards;
 }
+
+@keyframes aparece {
+    0% {
+        opacity: 0;
+        transform: scale(0.001);
+    }
+}
+
 .eficiencia {
     top: 50%;
     left: 60%;
@@ -238,6 +277,10 @@ body {
 
     font-size: 1.2em;
     font-family: "Open Sans Condensed", sans-serif;
+
+    animation: aparece 0.5s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
 }
 .blog .inicio-post {
     display: none;

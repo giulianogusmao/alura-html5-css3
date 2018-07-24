@@ -1,3 +1,8 @@
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .portfolio li {
     display: inline-block;
     border: 8px solid black;
@@ -7,6 +12,12 @@
     padding: 16px;
     margin-right: 16px;
     margin-bottom: 16px;
+
+    flex: 1 1 45%;
+
+    &:first-child {
+        flex-basis: 100%;
+    }
 }
 
 .portfolio img {

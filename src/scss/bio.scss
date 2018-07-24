@@ -6,7 +6,10 @@
     width: 30ch;
     box-sizing: border-box;
     
-    transition: .2s ease-in-out;
+    transition: transform .2s ease-in-out, 
+                box-shadow .4s ease-out;
+    transition-delay: .2s, 0s;
+
     &:hover, &:focus {
         transform: rotate(5deg) scale(1.1);
         box-shadow: 0 0 0 99999em rgba(0,0,0, .7);
